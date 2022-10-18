@@ -16,39 +16,39 @@ part 'location_details_result.g.dart';
 @JsonSerializable()
 class LocationDetailsResult {
   @JsonKey(name: "location_id")
-  final String locationId;
-  final String name;
+  final String? locationId;
+  final String? name;
   final String? description;
   @JsonKey(name: "web_url")
-  final String webUrl;
+  final String? webUrl;
   @JsonKey(name: "address_obj")
   final AddressObject? addressObj;
   final Iterable<Ancestor>? ancestors;
   final num? latitude;
   final num? longitude;
-  final String timezone;
+  final String? timezone;
   final String? email;
   final String? phone;
   final String? website;
   @JsonKey(name: "write_review")
-  final String writeReview;
+  final String? writeReview;
   @JsonKey(name: "ranking_data")
-  final RankingData rankingData;
-  final int rating;
+  final RankingData? rankingData;
+  final int? rating;
   @JsonKey(name: "rating_image_url")
-  final String ratingImageUrl;
+  final String? ratingImageUrl;
   @JsonKey(name: "num_reviews")
-  final int numReviews;
+  final int? numReviews;
   @JsonKey(name: "review_rating_count")
   final Map<int, int>? reviewRatingCount;
   @JsonKey(name: "sub_ratings")
-  final Map<int, Subrating> subRatings;
+  final Map<int, Subrating>? subRatings;
   @JsonKey(name: "photo_count")
-  final int photoCount;
+  final int? photoCount;
   @JsonKey(name: "see_all_photos")
-  final String seeAllPhotos;
+  final String? seeAllPhotos;
   @JsonKey(name: "price_level")
-  final String priceLevel;
+  final String? priceLevel;
   final OpeningHours? hours;
   final Iterable<String>? amenities;
   final Iterable<String>? features;
@@ -56,16 +56,15 @@ class LocationDetailsResult {
   @JsonKey(name: "parent_brand")
   final String? parentBrand;
   final String? brand;
-  final Category category;
-  final Iterable<Category> subcategory;
-  final Iterable<Group> groups;
+  final Category? category;
+  final Iterable<Category>? subcategory;
+  final Iterable<Group>? groups;
   final Iterable<String>? styles;
   @JsonKey(name: "neighborhood_info")
   final Iterable<Neighborhood>? neighborhoodInfo;
   @JsonKey(name: "trip_types")
   final Iterable<TripType>? tripTypes;
   final Iterable<Award>? awards;
-  final TripAdvisorError? error;
 
   LocationDetailsResult(
       this.locationId,
@@ -102,8 +101,7 @@ class LocationDetailsResult {
       this.styles,
       this.neighborhoodInfo,
       this.tripTypes,
-      this.awards,
-      this.error);
+      this.awards);
 
   factory LocationDetailsResult.fromJson(Map<String, dynamic> json) =>
       _$LocationDetailsResultFromJson(json);
