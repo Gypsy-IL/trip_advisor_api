@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'search_place.dart';
+part of 'search_place_result.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SearchPlace _$SearchPlaceFromJson(Map json) => SearchPlace(
+SearchPlaceResult _$SearchPlaceResultFromJson(Map json) => SearchPlaceResult(
       json['location_id'] as String,
       json['name'] as String,
       json['distance'] as String,
@@ -16,7 +16,7 @@ SearchPlace _$SearchPlaceFromJson(Map json) => SearchPlace(
           Map<String, dynamic>.from(json['address_obj'] as Map)),
     );
 
-Map<String, dynamic> _$SearchPlaceToJson(SearchPlace instance) =>
+Map<String, dynamic> _$SearchPlaceResultToJson(SearchPlaceResult instance) =>
     <String, dynamic>{
       'location_id': instance.locationId,
       'name': instance.name,

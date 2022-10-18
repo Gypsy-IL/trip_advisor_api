@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:trip_advisor_api/src/models/address_object.dart';
 
-part 'search_place.g.dart';
+part 'search_place_result.g.dart';
 
 @JsonSerializable()
-class SearchPlace {
+class SearchPlaceResult {
   @JsonKey(name: "location_id")
   final String locationId;
   final String name;
@@ -14,11 +14,11 @@ class SearchPlace {
   @JsonKey(name: "address_obj")
   final AddressObject addressObject;
 
-  SearchPlace(this.locationId, this.name, this.distance, this.rating,
+  SearchPlaceResult(this.locationId, this.name, this.distance, this.rating,
       this.bearing, this.addressObject);
 
-  factory SearchPlace.fromJson(Map<String, dynamic> json) =>
-      _$SearchPlaceFromJson(json);
+  factory SearchPlaceResult.fromJson(Map<String, dynamic> json) =>
+      _$SearchPlaceResultFromJson(json);
 
-  Map<String, dynamic> toJson() => _$SearchPlaceToJson(this);
+  Map<String, dynamic> toJson() => _$SearchPlaceResultToJson(this);
 }

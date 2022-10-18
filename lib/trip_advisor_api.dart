@@ -6,7 +6,7 @@ library trip_advisor_api;
 export 'src/models/api_settings.dart';
 
 export 'src/search/models/search_response.dart';
-export 'src/search/models/search_place.dart';
+export 'src/search/models/search_place_result.dart';
 
 export 'src/search/nearby_search/nearby_search.dart';
 export 'src/search/nearby_search/nearby_search_parameters.dart';

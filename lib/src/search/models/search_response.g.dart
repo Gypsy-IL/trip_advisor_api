@@ -7,8 +7,8 @@ part of 'search_response.dart';
 // **************************************************************************
 
 SearchResponse _$SearchResponseFromJson(Map json) => SearchResponse(
-      data: (json['data'] as List<dynamic>?)?.map(
-          (e) => SearchPlace.fromJson(Map<String, dynamic>.from(e as Map))),
+      data: (json['data'] as List<dynamic>?)?.map((e) =>
+          SearchPlaceResult.fromJson(Map<String, dynamic>.from(e as Map))),
       error: json['error'] == null
           ? null
           : TripAdvisorError.fromJson(
