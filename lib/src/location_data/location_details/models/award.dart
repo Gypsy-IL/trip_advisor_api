@@ -12,9 +12,9 @@ class Award {
   final String displayName;
 
   Award(
-      {required this.aroundType,
-      required this.year,
-      required this.images,
-      required this.categories,
-      required this.displayName});
+      this.aroundType,
+      this.year,
+      this.images,
+      this.categories,
+      this.displayName);
 }

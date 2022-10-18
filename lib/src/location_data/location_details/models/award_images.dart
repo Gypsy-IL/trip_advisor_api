@@ -3,5 +3,5 @@ class AwardImages {
   final String small;
   final String large;
 
-  AwardImages({required this.tiny, required this.small, required this.large});
+  AwardImages(this.tiny, this.small, this.large);
 }

@@ -8,9 +8,5 @@ class Ancestor {
   @JsonKey(name: "location_id")
   final String locationId;
 
-  Ancestor(
-      {this.abbrv,
-      required this.level,
-      required this.name,
-      required this.locationId});
+  Ancestor(this.abbrv, this.level, this.name, this.locationId);
 }
