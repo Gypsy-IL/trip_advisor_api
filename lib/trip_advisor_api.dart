@@ -3,6 +3,13 @@
 /// More dartdocs go here.
 library trip_advisor_api;
 
-export 'src/trip_advisor_api_base.dart';
+export 'src/api_settings.dart';
 
-// TODO: Export any libraries intended for clients of this package.
+export 'src/nearby_search/nearby_search.dart';
+export 'src/nearby_search/models/nearby_search_parameters.dart';
+export 'src/nearby_search/models/nearby_search_response.dart';
+export 'src/nearby_search/models/nearby_search_result.dart';
+
+export 'src/models/address_object.dart';
+export 'src/models/lat_long.dart';
+export 'src/models/trip_advisor_error.dart';
