@@ -6,8 +6,8 @@ part of 'location_photo_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-LocationPhotosResult _$LocationPhotosResultFromJson(Map json) =>
-    LocationPhotosResult(
+LocationPhotoResult _$LocationPhotoResultFromJson(Map json) =>
+    LocationPhotoResult(
       json['id'] as String,
       json['is_blessed'] as bool,
       json['album'] as String?,
@@ -18,8 +18,8 @@ LocationPhotosResult _$LocationPhotosResultFromJson(Map json) =>
       PhotosUser.fromJson(Map<String, dynamic>.from(json['user'] as Map)),
     );
 
-Map<String, dynamic> _$LocationPhotosResultToJson(
-        LocationPhotosResult instance) =>
+Map<String, dynamic> _$LocationPhotoResultToJson(
+        LocationPhotoResult instance) =>
     <String, dynamic>{
       'id': instance.id,
       'is_blessed': instance.isBlessed,

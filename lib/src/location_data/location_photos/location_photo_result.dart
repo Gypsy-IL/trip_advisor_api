@@ -6,7 +6,7 @@ import 'package:trip_advisor_api/src/location_data/location_photos/models/source
 part 'location_photo_result.g.dart';
 
 @JsonSerializable()
-class LocationPhotosResult {
+class LocationPhotoResult {
   final String id;
   @JsonKey(name: "is_blessed")
   final bool isBlessed;
@@ -18,11 +18,11 @@ class LocationPhotosResult {
   final Source source;
   final PhotosUser user;
 
-  LocationPhotosResult(this.id, this.isBlessed, this.album, this.caption,
+  LocationPhotoResult(this.id, this.isBlessed, this.album, this.caption,
       this.publishedDate, this.images, this.source, this.user);
 
-  factory LocationPhotosResult.fromJson(Map<String, dynamic> json) =>
-      _$LocationPhotosResultFromJson(json);
+  factory LocationPhotoResult.fromJson(Map<String, dynamic> json) =>
+      _$LocationPhotoResultFromJson(json);
 
-  Map<String, dynamic> toJson() => _$LocationPhotosResultToJson(this);
+  Map<String, dynamic> toJson() => _$LocationPhotoResultToJson(this);
 }
