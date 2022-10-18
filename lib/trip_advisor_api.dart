@@ -3,7 +3,7 @@
 /// More dartdocs go here.
 library trip_advisor_api;
 
-export 'src/api_settings.dart';
+export 'src/models/api_settings.dart';
 
 export 'src/nearby_search/nearby_search.dart';
 export 'src/nearby_search/models/nearby_search_parameters.dart';

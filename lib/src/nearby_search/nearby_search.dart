@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:trip_advisor_api/src/api_settings.dart';
+import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/constants/url_constants.dart';
 import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_parameters.dart';
 import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_response.dart';
