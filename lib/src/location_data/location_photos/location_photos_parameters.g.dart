@@ -8,8 +8,8 @@ part of 'location_photos_parameters.dart';
 
 LocationPhotosParameters _$LocationPhotosParametersFromJson(Map json) =>
     LocationPhotosParameters(
-      json['locationId'] as String,
-      $enumDecodeNullable(_$LanguagesEnumMap, json['language']),
+      locationId: json['locationId'] as String,
+      language: $enumDecodeNullable(_$LanguagesEnumMap, json['language']),
     );
 
 Map<String, dynamic> _$LocationPhotosParametersToJson(

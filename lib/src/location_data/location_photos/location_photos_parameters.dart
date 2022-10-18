@@ -8,7 +8,7 @@ class LocationPhotosParameters {
   final String locationId;
   final Languages? language;
 
-  LocationPhotosParameters(this.locationId, this.language);
+  LocationPhotosParameters({required this.locationId, this.language});
 
   factory LocationPhotosParameters.fromJson(Map<String, dynamic> json) =>
       _$LocationPhotosParametersFromJson(json);
