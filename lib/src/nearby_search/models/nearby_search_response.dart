@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:json_serializable/builder.dart';
-import 'package:trip_advisor_api/models/trip_advisor_error.dart';
-import 'package:trip_advisor_api/nearby_search/models/nearby_search_result.dart';
+import 'package:trip_advisor_api/src/models/trip_advisor_error.dart';
+
+import 'nearby_search_result.dart';
 
 part 'nearby_search_response.g.dart';
 

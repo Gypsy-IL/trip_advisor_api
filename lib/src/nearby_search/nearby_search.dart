@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:trip_advisor_api/api_settings.dart';
-import 'package:trip_advisor_api/constants/url_constants.dart';
-import 'package:trip_advisor_api/nearby_search/models/nearby_search_parameters.dart';
-import 'package:trip_advisor_api/nearby_search/models/nearby_search_response.dart';
-import 'package:trip_advisor_api/network_utils.dart';
+import 'package:trip_advisor_api/src/api_settings.dart';
+import 'package:trip_advisor_api/src/constants/url_constants.dart';
+import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_parameters.dart';
+import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_response.dart';
+import 'package:trip_advisor_api/src/network_utils.dart';
 
 class NearbySearch {
   final ApiSettings _settings;

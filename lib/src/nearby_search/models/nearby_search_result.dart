@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/models/address_object.dart';
+import 'package:trip_advisor_api/src/models/address_object.dart';
 
 part 'nearby_search_result.g.dart';
 

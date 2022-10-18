@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/models/lat_long.dart';
-
+import 'package:trip_advisor_api/src/models/lat_long.dart';
 part 'nearby_search_parameters.g.dart';
 
 enum Categories { hotels, attractions, restaurants, geos }
