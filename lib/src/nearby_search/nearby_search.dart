@@ -23,8 +23,15 @@ class NearbySearch {
       "key": _settings.apiKey,
       "language": _settings.language.name,
     };
+    NetworkUtils.addIfNotNull(queryParams, MapEntry("address", params.address));
     NetworkUtils.addIfNotNull(
-        queryParams, MapEntry("category", params.category));
+        queryParams, MapEntry("category", params.category?.name));
+    NetworkUtils.addIfNotNull(
+        queryParams, MapEntry("latLong", params.latLong.toParameter()));
+    NetworkUtils.addIfNotNull(queryParams, MapEntry("phone", params.phone));
+    NetworkUtils.addIfNotNull(queryParams, MapEntry("radius", params.radius));
+    NetworkUtils.addIfNotNull(
+        queryParams, MapEntry("radiusUnit", params.radiusUnit?.name));
     return queryParams;
   }
 }

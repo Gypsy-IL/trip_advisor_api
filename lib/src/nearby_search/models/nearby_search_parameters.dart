@@ -13,11 +13,13 @@ class NearbySearchParameters {
   final String? phone;
   final String? address;
   final String? radius;
+  final RadiusUnit? radiusUnit;
 
   NearbySearchParameters(
       {required this.latLong,
       this.category,
       this.phone,
       this.address,
-      this.radius});
+      this.radius,
+      this.radiusUnit});
 }

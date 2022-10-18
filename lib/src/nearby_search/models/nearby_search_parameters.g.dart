@@ -14,6 +14,7 @@ NearbySearchParameters _$NearbySearchParametersFromJson(Map json) =>
       phone: json['phone'] as String?,
       address: json['address'] as String?,
       radius: json['radius'] as String?,
+      radiusUnit: $enumDecodeNullable(_$RadiusUnitEnumMap, json['radiusUnit']),
     );
 
 Map<String, dynamic> _$NearbySearchParametersToJson(
@@ -24,6 +25,7 @@ Map<String, dynamic> _$NearbySearchParametersToJson(
       'phone': instance.phone,
       'address': instance.address,
       'radius': instance.radius,
+      'radiusUnit': _$RadiusUnitEnumMap[instance.radiusUnit],
     };
 
 const _$CategoriesEnumMap = {
@@ -31,4 +33,10 @@ const _$CategoriesEnumMap = {
   Categories.attractions: 'attractions',
   Categories.restaurants: 'restaurants',
   Categories.geos: 'geos',
+};
+
+const _$RadiusUnitEnumMap = {
+  RadiusUnit.km: 'km',
+  RadiusUnit.mi: 'mi',
+  RadiusUnit.m: 'm',
 };
