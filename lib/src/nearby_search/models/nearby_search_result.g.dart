@@ -7,10 +7,10 @@ part of 'nearby_search_result.dart';
 // **************************************************************************
 
 NearbySearchResult _$NearbySearchResultFromJson(Map json) => NearbySearchResult(
-      json['location_id'] as int,
+      json['location_id'] as String,
       json['name'] as String,
       json['distance'] as String,
-      json['rating'] as String,
+      json['rating'] as String?,
       json['bearing'] as String,
       AddressObject.fromJson(
           Map<String, dynamic>.from(json['address_obj'] as Map)),

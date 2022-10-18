@@ -6,10 +6,10 @@ part 'nearby_search_result.g.dart';
 @JsonSerializable()
 class NearbySearchResult {
   @JsonKey(name: "location_id")
-  final int locationId;
+  final String locationId;
   final String name;
   final String distance;
-  final String rating;
+  final String? rating;
   final String bearing;
   @JsonKey(name: "address_obj")
   final AddressObject addressObject;
