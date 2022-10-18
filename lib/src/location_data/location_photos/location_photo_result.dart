@@ -3,6 +3,8 @@ import 'package:trip_advisor_api/src/location_data/location_photos/models/images
 import 'package:trip_advisor_api/src/location_data/location_photos/models/photos_user.dart';
 import 'package:trip_advisor_api/src/location_data/location_photos/models/source.dart';
 
+part 'location_photo_result.g.dart';
+
 @JsonSerializable()
 class LocationPhotosResult {
   final String id;
@@ -18,4 +20,9 @@ class LocationPhotosResult {
 
   LocationPhotosResult(this.id, this.isBlessed, this.album, this.caption,
       this.publishedDate, this.images, this.source, this.user);
+
+  factory LocationPhotosResult.fromJson(Map<String, dynamic> json) =>
+      _$LocationPhotosResultFromJson(json);
+
+  Map<String, dynamic> toJson() => _$LocationPhotosResultToJson(this);
 }
