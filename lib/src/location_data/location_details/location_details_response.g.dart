@@ -35,7 +35,7 @@ LocationDetailsResponse _$LocationDetailsResponseFromJson(Map json) =>
       (json['review_rating_count'] as Map?)?.map(
         (k, e) => MapEntry(int.parse(k as String), e as String),
       ),
-      (json['sub_ratings'] as Map?)?.map(
+      (json['subratings'] as Map?)?.map(
         (k, e) => MapEntry(int.parse(k as String),
             Subrating.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
@@ -95,7 +95,7 @@ Map<String, dynamic> _$LocationDetailsResponseToJson(
       'num_reviews': instance.numReviews,
       'review_rating_count':
           instance.reviewRatingCount?.map((k, e) => MapEntry(k.toString(), e)),
-      'sub_ratings': instance.subRatings
+      'subratings': instance.subratings
           ?.map((k, e) => MapEntry(k.toString(), e.toJson())),
       'photo_count': instance.photoCount,
       'see_all_photos': instance.seeAllPhotos,

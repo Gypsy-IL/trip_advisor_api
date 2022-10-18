@@ -10,7 +10,7 @@ import 'models/group.dart';
 import 'models/neighborhood.dart';
 import 'models/opening_hours.dart';
 import 'models/ranking_data.dart';
-import 'models/subrating.dart';
+import '../models/subrating.dart';
 import 'models/trip_type.dart';
 
 part 'location_details_response.g.dart';
@@ -38,7 +38,7 @@ class LocationDetailsResponse extends LocationDetailsResult {
       super.ratingImageUrl,
       super.numReviews,
       super.reviewRatingCount,
-      super.subRatings,
+      super.subratings,
       super.photoCount,
       super.seeAllPhotos,
       super.priceLevel,

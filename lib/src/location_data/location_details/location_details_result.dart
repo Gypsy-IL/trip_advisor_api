@@ -8,7 +8,7 @@ import 'package:trip_advisor_api/src/location_data/location_details/models/group
 import 'package:trip_advisor_api/src/location_data/location_details/models/neighborhood.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/opening_hours.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/ranking_data.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/subrating.dart';
+import 'package:trip_advisor_api/src/location_data/models/subrating.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/trip_type.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 
@@ -45,8 +45,7 @@ class LocationDetailsResult {
   final int? numReviews;
   @JsonKey(name: "review_rating_count")
   final Map<int, String>? reviewRatingCount;
-  @JsonKey(name: "sub_ratings")
-  final Map<int, Subrating>? subRatings;
+  final Map<int, Subrating>? subratings;
   @JsonKey(name: "photo_count", fromJson: JsonUtils.parseInt)
   final int? photoCount;
   @JsonKey(name: "see_all_photos")
@@ -89,7 +88,7 @@ class LocationDetailsResult {
       this.ratingImageUrl,
       this.numReviews,
       this.reviewRatingCount,
-      this.subRatings,
+      this.subratings,
       this.photoCount,
       this.seeAllPhotos,
       this.priceLevel,
