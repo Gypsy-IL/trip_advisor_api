@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'nearby_search_result.dart';
+part of 'search_place.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-NearbySearchResult _$NearbySearchResultFromJson(Map json) => NearbySearchResult(
+SearchPlace _$SearchPlaceFromJson(Map json) => SearchPlace(
       json['location_id'] as String,
       json['name'] as String,
       json['distance'] as String,
@@ -16,7 +16,7 @@ NearbySearchResult _$NearbySearchResultFromJson(Map json) => NearbySearchResult(
           Map<String, dynamic>.from(json['address_obj'] as Map)),
     );
 
-Map<String, dynamic> _$NearbySearchResultToJson(NearbySearchResult instance) =>
+Map<String, dynamic> _$SearchPlaceToJson(SearchPlace instance) =>
     <String, dynamic>{
       'location_id': instance.locationId,
       'name': instance.name,

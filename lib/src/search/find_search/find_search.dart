@@ -1,24 +1,25 @@
 import 'dart:convert';
 
-import 'package:http/http.dart';
-import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/constants/url_constants.dart';
-import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_parameters.dart';
-import 'package:trip_advisor_api/src/nearby_search/models/nearby_search_response.dart';
+import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
+import 'package:trip_advisor_api/src/search/models/search_response.dart';
 
-class NearbySearch {
+import 'find_search_parameters.dart';
+
+class FindSearch {
   final ApiSettings _settings;
-  NearbySearch(this._settings);
 
-  Future<NearbySearchResponse> get(NearbySearchParameters params) async {
+  FindSearch(this._settings);
+
+  Future<SearchResponse> get(FindSearchParameters params) async {
     var uri = Uri.https(UrlConstants.baseUrl,
-        UrlConstants.nearbySearchUnencodedPath, _createQueryParameters(params));
+        UrlConstants.findSearchUnencodedPath, _createQueryParameters(params));
     var response = await NetworkUtils.getRequest(uri);
-    return NearbySearchResponse.fromJson(jsonDecode(response.body));
+    return SearchResponse.fromJson(jsonDecode(response.body));
   }
 
-  Map<String, dynamic> _createQueryParameters(NearbySearchParameters params) {
+  Map<String, dynamic> _createQueryParameters(FindSearchParameters params) {
     Map<String, dynamic> queryParams = {
       "key": _settings.apiKey,
       "language": _settings.language.name,
@@ -27,11 +28,13 @@ class NearbySearch {
     NetworkUtils.addIfNotNull(
         queryParams, MapEntry("category", params.category?.name));
     NetworkUtils.addIfNotNull(
-        queryParams, MapEntry("latLong", params.latLong.toParameter()));
+        queryParams, MapEntry("latLong", params.latLong?.toParameter()));
     NetworkUtils.addIfNotNull(queryParams, MapEntry("phone", params.phone));
     NetworkUtils.addIfNotNull(queryParams, MapEntry("radius", params.radius));
     NetworkUtils.addIfNotNull(
         queryParams, MapEntry("radiusUnit", params.radiusUnit?.name));
+    NetworkUtils.addIfNotNull(
+        queryParams, MapEntry("searchQuery", params.searchQuery));
     return queryParams;
   }
 }

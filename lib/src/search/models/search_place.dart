@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:trip_advisor_api/src/models/address_object.dart';
 
-part 'nearby_search_result.g.dart';
+part 'search_place.g.dart';
 
 @JsonSerializable()
-class NearbySearchResult {
+class SearchPlace {
   @JsonKey(name: "location_id")
   final String locationId;
   final String name;
@@ -14,11 +14,11 @@ class NearbySearchResult {
   @JsonKey(name: "address_obj")
   final AddressObject addressObject;
 
-  NearbySearchResult(this.locationId, this.name, this.distance, this.rating,
+  SearchPlace(this.locationId, this.name, this.distance, this.rating,
       this.bearing, this.addressObject);
 
-  factory NearbySearchResult.fromJson(Map<String, dynamic> json) =>
-      _$NearbySearchResultFromJson(json);
+  factory SearchPlace.fromJson(Map<String, dynamic> json) =>
+      _$SearchPlaceFromJson(json);
 
-  Map<String, dynamic> toJson() => _$NearbySearchResultToJson(this);
+  Map<String, dynamic> toJson() => _$SearchPlaceToJson(this);
 }
