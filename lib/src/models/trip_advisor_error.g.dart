@@ -9,7 +9,7 @@ part of 'trip_advisor_error.dart';
 TripAdvisorError _$TripAdvisorErrorFromJson(Map json) => TripAdvisorError(
       json['message'] as String,
       json['type'] as String,
-      json['code'] as int,
+      int.parse(json['code'] as String),
     );
 
 Map<String, dynamic> _$TripAdvisorErrorToJson(TripAdvisorError instance) =>

@@ -1,23 +1,21 @@
 import 'dart:convert';
 
 import 'package:trip_advisor_api/src/constants/url_constants.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/location_details_parameters.dart';
-import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
-import 'package:trip_advisor_api/src/search/models/search_response.dart';
+import 'package:trip_advisor_api/trip_advisor_api.dart';
 
 class LocationDetails {
   final ApiSettings _settings;
 
   LocationDetails(this._settings);
 
-  Future<SearchResponse> get(LocationDetailsParameters params) async {
+  Future<LocationDetailsResponse> get(LocationDetailsParameters params) async {
     var uri = Uri.https(
         UrlConstants.baseUrl,
         UrlConstants.locationDetailsUnencodedPath(params.locationId),
         _createQueryParameters(params));
     var response = await NetworkUtils.getRequest(uri);
-    return SearchResponse.fromJson(jsonDecode(response.body));
+    return LocationDetailsResponse.fromJson(jsonDecode(response.body));
   }
 
   Map<String, dynamic> _createQueryParameters(

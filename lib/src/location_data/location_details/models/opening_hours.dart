@@ -9,7 +9,7 @@ class OpeningHours {
   final Iterable<OpeningHourPeriod> periods;
   @JsonKey(name: "weekday_text")
   final Iterable<String> weekdayText;
-  final Iterable<Category> subcategory;
+  final Iterable<Category>? subcategory;
 
   OpeningHours(this.periods, this.weekdayText, this.subcategory);
 

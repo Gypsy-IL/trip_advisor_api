@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/json_utils.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 
 import 'models/ancestor.dart';
@@ -59,4 +60,8 @@ class LocationDetailsResponse extends LocationDetailsResult {
   LocationDetailsResult get data {
     return this;
   }
+
+  factory LocationDetailsResponse.fromJson(Map<String, dynamic> json) =>
+      _$LocationDetailsResponseFromJson(json);
+  Map<String, dynamic> toJson() => _$LocationDetailsResponseToJson(this);
 }

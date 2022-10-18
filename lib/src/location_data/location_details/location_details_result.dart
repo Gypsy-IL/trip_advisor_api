@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/json_utils.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/ancestor.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/award.dart';
 import 'package:trip_advisor_api/src/location_data/location_details/models/category.dart';
@@ -24,7 +25,9 @@ class LocationDetailsResult {
   @JsonKey(name: "address_obj")
   final AddressObject? addressObj;
   final Iterable<Ancestor>? ancestors;
+  @JsonKey(fromJson: JsonUtils.parseDouble)
   final num? latitude;
+  @JsonKey(fromJson: JsonUtils.parseDouble)
   final num? longitude;
   final String? timezone;
   final String? email;
@@ -34,16 +37,17 @@ class LocationDetailsResult {
   final String? writeReview;
   @JsonKey(name: "ranking_data")
   final RankingData? rankingData;
-  final int? rating;
+  @JsonKey(fromJson: JsonUtils.parseDouble)
+  final num? rating;
   @JsonKey(name: "rating_image_url")
   final String? ratingImageUrl;
-  @JsonKey(name: "num_reviews")
+  @JsonKey(name: "num_reviews", fromJson: JsonUtils.parseInt)
   final int? numReviews;
   @JsonKey(name: "review_rating_count")
-  final Map<int, int>? reviewRatingCount;
+  final Map<int, String>? reviewRatingCount;
   @JsonKey(name: "sub_ratings")
   final Map<int, Subrating>? subRatings;
-  @JsonKey(name: "photo_count")
+  @JsonKey(name: "photo_count", fromJson: JsonUtils.parseInt)
   final int? photoCount;
   @JsonKey(name: "see_all_photos")
   final String? seeAllPhotos;

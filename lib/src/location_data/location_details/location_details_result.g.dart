@@ -18,8 +18,8 @@ LocationDetailsResult _$LocationDetailsResultFromJson(Map json) =>
               Map<String, dynamic>.from(json['address_obj'] as Map)),
       (json['ancestors'] as List<dynamic>?)
           ?.map((e) => Ancestor.fromJson(Map<String, dynamic>.from(e as Map))),
-      json['latitude'] as num?,
-      json['longitude'] as num?,
+      JsonUtils.parseDouble(json['latitude'] as String?),
+      JsonUtils.parseDouble(json['longitude'] as String?),
       json['timezone'] as String?,
       json['email'] as String?,
       json['phone'] as String?,
@@ -29,17 +29,17 @@ LocationDetailsResult _$LocationDetailsResultFromJson(Map json) =>
           ? null
           : RankingData.fromJson(
               Map<String, dynamic>.from(json['ranking_data'] as Map)),
-      json['rating'] as int?,
+      JsonUtils.parseDouble(json['rating'] as String?),
       json['rating_image_url'] as String?,
-      json['num_reviews'] as int?,
+      JsonUtils.parseInt(json['num_reviews'] as String?),
       (json['review_rating_count'] as Map?)?.map(
-        (k, e) => MapEntry(int.parse(k as String), e as int),
+        (k, e) => MapEntry(int.parse(k as String), e as String),
       ),
       (json['sub_ratings'] as Map?)?.map(
         (k, e) => MapEntry(int.parse(k as String),
             Subrating.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
-      json['photo_count'] as int?,
+      JsonUtils.parseInt(json['photo_count'] as String?),
       json['see_all_photos'] as String?,
       json['price_level'] as String?,
       json['hours'] == null

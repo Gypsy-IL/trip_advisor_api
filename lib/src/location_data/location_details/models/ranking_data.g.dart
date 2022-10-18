@@ -7,11 +7,11 @@ part of 'ranking_data.dart';
 // **************************************************************************
 
 RankingData _$RankingDataFromJson(Map json) => RankingData(
-      json['geo_location_id'] as int,
+      int.parse(json['geo_location_id'] as String),
       json['ranking_string'] as String,
       json['geo_location_name'] as String,
-      json['ranking_out_of'] as int,
-      json['ranking'] as int,
+      int.parse(json['ranking_out_of'] as String),
+      int.parse(json['ranking'] as String),
     );
 
 Map<String, dynamic> _$RankingDataToJson(RankingData instance) =>
