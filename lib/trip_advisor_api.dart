@@ -19,6 +19,11 @@ export 'src/location_data/location_details/location_details_parameters.dart';
 export 'src/location_data/location_details/location_details_response.dart';
 export 'src/location_data/location_details/location_details_result.dart';
 
+export 'src/location_data/location_photos/location_photos.dart';
+export 'src/location_data/location_photos/location_photos_parameters.dart';
+export 'src/location_data/location_photos/location_photos_response.dart';
+export 'src/location_data/location_photos/location_photo_result.dart';
+
 export 'src/models/address_object.dart';
 export 'src/models/lat_long.dart';
 export 'src/models/trip_advisor_error.dart';
