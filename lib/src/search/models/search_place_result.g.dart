@@ -23,5 +23,5 @@ Map<String, dynamic> _$SearchPlaceResultToJson(SearchPlaceResult instance) =>
       'distance': instance.distance,
       'rating': instance.rating,
       'bearing': instance.bearing,
-      'address_obj': instance.addressObject.toJson(),
+      'address_obj': instance.addressObj.toJson(),
     };

@@ -12,10 +12,10 @@ class SearchPlaceResult {
   final String? rating;
   final String bearing;
   @JsonKey(name: "address_obj")
-  final AddressObject addressObject;
+  final AddressObject addressObj;
 
   SearchPlaceResult(this.locationId, this.name, this.distance, this.rating,
-      this.bearing, this.addressObject);
+      this.bearing, this.addressObj);
 
   factory SearchPlaceResult.fromJson(Map<String, dynamic> json) =>
       _$SearchPlaceResultFromJson(json);
