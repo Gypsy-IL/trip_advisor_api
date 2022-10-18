@@ -7,4 +7,7 @@ class UrlConstants {
       "$_locationPath/nearby_search";
 
   static const String findSearchUnencodedPath = "$_locationPath/search";
+
+  static String locationDetailsUnencodedPath(String locationId) =>
+      "$_locationPath/$locationId/details";
 }

@@ -4,6 +4,8 @@ part 'api_settings.g.dart';
 
 enum Languages { en }
 
+enum Currencies { USD }
+
 @JsonSerializable()
 class ApiSettings {
   final String apiKey;
