@@ -10,4 +10,9 @@ class ApiSettings {
   final Languages language;
 
   ApiSettings(this.apiKey, this.language);
+
+  factory ApiSettings.fromJson(Map<String, dynamic> json) =>
+      _$ApiSettingsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ApiSettingsToJson(this);
 }
