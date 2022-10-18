@@ -7,7 +7,7 @@ enum Languages { en }
 @JsonSerializable()
 class ApiSettings {
   final String apiKey;
-  final Languages language;
+  final Languages? language;
 
   ApiSettings(this.apiKey, this.language);
 

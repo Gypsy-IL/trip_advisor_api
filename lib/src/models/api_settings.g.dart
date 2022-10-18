@@ -8,13 +8,13 @@ part of 'api_settings.dart';
 
 ApiSettings _$ApiSettingsFromJson(Map json) => ApiSettings(
       json['apiKey'] as String,
-      $enumDecode(_$LanguagesEnumMap, json['language']),
+      $enumDecodeNullable(_$LanguagesEnumMap, json['language']),
     );
 
 Map<String, dynamic> _$ApiSettingsToJson(ApiSettings instance) =>
     <String, dynamic>{
       'apiKey': instance.apiKey,
-      'language': _$LanguagesEnumMap[instance.language]!,
+      'language': _$LanguagesEnumMap[instance.language],
     };
 
 const _$LanguagesEnumMap = {
