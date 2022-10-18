@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'ranking_data.g.dart';
+
 @JsonSerializable()
 class RankingData {
   @JsonKey(name: "geo_location_id")
@@ -14,4 +16,9 @@ class RankingData {
 
   RankingData(this.geoLocationId, this.rankingString, this.geoLocationName,
       this.rankingOutOf, this.ranking);
+
+  factory RankingData.fromJson(Map<String, dynamic> json) =>
+      _$RankingDataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RankingDataToJson(this);
 }

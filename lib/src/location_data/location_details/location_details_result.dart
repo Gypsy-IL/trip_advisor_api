@@ -11,6 +11,8 @@ import 'package:trip_advisor_api/src/location_data/location_details/models/subra
 import 'package:trip_advisor_api/src/location_data/location_details/models/trip_type.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 
+part 'location_details_result.g.dart';
+
 @JsonSerializable()
 class LocationDetailsResult {
   @JsonKey(name: "location_id")
@@ -102,4 +104,9 @@ class LocationDetailsResult {
       this.tripTypes,
       this.awards,
       this.error);
+
+  factory LocationDetailsResult.fromJson(Map<String, dynamic> json) =>
+      _$LocationDetailsResultFromJson(json);
+
+  Map<String, dynamic> toJson() => _$LocationDetailsResultToJson(this);
 }
