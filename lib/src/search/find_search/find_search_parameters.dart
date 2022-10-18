@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:trip_advisor_api/src/models/lat_long.dart';
 import 'package:trip_advisor_api/src/search/models/categories.dart';
 import 'package:trip_advisor_api/src/search/models/radius_units.dart';
+import 'package:trip_advisor_api/trip_advisor_api.dart';
 part 'find_search_parameters.g.dart';
 
 @JsonSerializable()
@@ -13,6 +14,7 @@ class FindSearchParameters {
   final LatLong? latLong;
   final String? radius;
   final RadiusUnits? radiusUnit;
+  final Languages? language;
 
   FindSearchParameters(
       {required this.searchQuery,
@@ -21,5 +23,6 @@ class FindSearchParameters {
       this.address,
       this.latLong,
       this.radius,
-      this.radiusUnit});
+      this.radiusUnit,
+      this.language});
 }

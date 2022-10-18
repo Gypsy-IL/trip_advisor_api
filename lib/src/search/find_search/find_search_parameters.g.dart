@@ -17,6 +17,7 @@ FindSearchParameters _$FindSearchParametersFromJson(Map json) =>
           : LatLong.fromJson(Map<String, dynamic>.from(json['latLong'] as Map)),
       radius: json['radius'] as String?,
       radiusUnit: $enumDecodeNullable(_$RadiusUnitsEnumMap, json['radiusUnit']),
+      language: $enumDecodeNullable(_$LanguagesEnumMap, json['language']),
     );
 
 Map<String, dynamic> _$FindSearchParametersToJson(
@@ -29,6 +30,7 @@ Map<String, dynamic> _$FindSearchParametersToJson(
       'latLong': instance.latLong?.toJson(),
       'radius': instance.radius,
       'radiusUnit': _$RadiusUnitsEnumMap[instance.radiusUnit],
+      'language': _$LanguagesEnumMap[instance.language],
     };
 
 const _$CategoriesEnumMap = {
@@ -42,4 +44,8 @@ const _$RadiusUnitsEnumMap = {
   RadiusUnits.km: 'km',
   RadiusUnits.mi: 'mi',
   RadiusUnits.m: 'm',
+};
+
+const _$LanguagesEnumMap = {
+  Languages.en: 'en',
 };

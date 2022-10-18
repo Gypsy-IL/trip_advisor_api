@@ -22,8 +22,11 @@ class FindSearch {
   Map<String, dynamic> _createQueryParameters(FindSearchParameters params) {
     Map<String, dynamic> queryParams = {
       "key": _settings.apiKey,
-      "language": _settings.language.name,
     };
+    NetworkUtils.addIfNotNull(
+        queryParams, MapEntry("language", _settings.language?.name));
+    NetworkUtils.addIfNotNull(
+        queryParams, MapEntry("language", params.language?.name));
     NetworkUtils.addIfNotNull(queryParams, MapEntry("address", params.address));
     NetworkUtils.addIfNotNull(
         queryParams, MapEntry("category", params.category?.name));

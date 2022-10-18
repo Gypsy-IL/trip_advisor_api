@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/models/lat_long.dart';
 import 'package:trip_advisor_api/src/search/models/categories.dart';
 import 'package:trip_advisor_api/src/search/models/radius_units.dart';
@@ -12,6 +13,7 @@ class NearbySearchParameters {
   final String? address;
   final String? radius;
   final RadiusUnits? radiusUnit;
+  final Languages? language;
 
   NearbySearchParameters(
       {required this.latLong,
@@ -19,5 +21,6 @@ class NearbySearchParameters {
       this.phone,
       this.address,
       this.radius,
-      this.radiusUnit});
+      this.radiusUnit,
+      this.language});
 }
