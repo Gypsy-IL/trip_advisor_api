@@ -6,7 +6,7 @@ part 'location_photos_parameters.g.dart';
 @JsonSerializable()
 class LocationPhotosParameters {
   final String locationId;
-  final Languages language;
+  final Languages? language;
 
   LocationPhotosParameters(this.locationId, this.language);
 

@@ -9,14 +9,14 @@ part of 'location_photos_parameters.dart';
 LocationPhotosParameters _$LocationPhotosParametersFromJson(Map json) =>
     LocationPhotosParameters(
       json['locationId'] as String,
-      $enumDecode(_$LanguagesEnumMap, json['language']),
+      $enumDecodeNullable(_$LanguagesEnumMap, json['language']),
     );
 
 Map<String, dynamic> _$LocationPhotosParametersToJson(
         LocationPhotosParameters instance) =>
     <String, dynamic>{
       'locationId': instance.locationId,
-      'language': _$LanguagesEnumMap[instance.language]!,
+      'language': _$LanguagesEnumMap[instance.language],
     };
 
 const _$LanguagesEnumMap = {

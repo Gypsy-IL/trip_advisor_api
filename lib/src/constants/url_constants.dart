@@ -10,4 +10,7 @@ class UrlConstants {
 
   static String locationDetailsUnencodedPath(String locationId) =>
       "$_locationPath/$locationId/details";
+
+  static String locationPhotosUnencodedPath(String locationId) =>
+      "$_locationPath/$locationId/photos";
 }
