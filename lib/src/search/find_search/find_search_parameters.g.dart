@@ -6,7 +6,7 @@ part of 'find_search_parameters.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-FindSearchParameters _$NearbySearchParametersFromJson(Map json) =>
+FindSearchParameters _$FindSearchParametersFromJson(Map json) =>
     FindSearchParameters(
       searchQuery: json['searchQuery'] as String,
       category: $enumDecodeNullable(_$CategoriesEnumMap, json['category']),
@@ -19,7 +19,7 @@ FindSearchParameters _$NearbySearchParametersFromJson(Map json) =>
       radiusUnit: $enumDecodeNullable(_$RadiusUnitsEnumMap, json['radiusUnit']),
     );
 
-Map<String, dynamic> _$NearbySearchParametersToJson(
+Map<String, dynamic> _$FindSearchParametersToJson(
         FindSearchParameters instance) =>
     <String, dynamic>{
       'searchQuery': instance.searchQuery,
