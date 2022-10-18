@@ -1,6 +1,7 @@
 class UrlConstants {
-  static const String _urlBeginning = "api.content.tripadvisor.com/api";
-  static const String _apiVersion = "v1";
-  static const String _locationPath = "$_urlBeginning/$_apiVersion/location";
-  static const String nearbySearchUrl = "$_locationPath/nearby_search";
+  static const String baseUrl = "api.content.tripadvisor.com";
+  static const String _api = "api/v1";
+  static const String _locationPath = "$_api/location";
+  static const String nearbySearchUnencodedPath =
+      "$_locationPath/nearby_search";
 }
