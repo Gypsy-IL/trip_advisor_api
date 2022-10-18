@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'address_object.g.dart';
+
 @JsonSerializable()
 class AddressObject {
   final String? street1;
@@ -25,4 +27,9 @@ class AddressObject {
       this.phone,
       this.latitude,
       this.longitude});
+
+  factory AddressObject.fromJson(Map<String, dynamic> json) =>
+      _$AddressObjectFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AddressObjectToJson(this);
 }
