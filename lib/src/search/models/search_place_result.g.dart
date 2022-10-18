@@ -12,7 +12,7 @@ SearchPlaceResult _$SearchPlaceResultFromJson(Map json) => SearchPlaceResult(
       json['distance'] as String,
       json['rating'] as String?,
       json['bearing'] as String,
-      AddressObject.fromJson(
+      ExtendedAddressObject.fromJson(
           Map<String, dynamic>.from(json['address_obj'] as Map)),
     );
 

@@ -12,21 +12,9 @@ class AddressObject {
   final String? postalcode;
   @JsonKey(name: "address_string")
   final String? addressString;
-  final String? phone;
-  final num? latitude;
-  final num? longitude;
 
-  AddressObject(
-      {this.street1,
-      this.street2,
-      this.city,
-      this.state,
-      this.country,
-      this.postalcode,
-      this.addressString,
-      this.phone,
-      this.latitude,
-      this.longitude});
+  AddressObject(this.street1, this.street2, this.city, this.state, this.country,
+      this.postalcode, this.addressString);
 
   factory AddressObject.fromJson(Map<String, dynamic> json) =>
       _$AddressObjectFromJson(json);
