@@ -9,11 +9,15 @@ import 'find_search_parameters.dart';
 
 export 'find_search_parameters.dart';
 
+/// Class that communicates with the find search api
 class FindSearch {
   final ApiSettings _settings;
 
   FindSearch(this._settings);
 
+  /// Get a [SearchResponse] which from the passed [FindSearchParameters]
+  /// The Location Search request returns up to 10 locations found by the given search query.
+  ///You can use category ("hotels", "attractions", "restaurants", "geos"), phone number, address, and latitude/longitude to search with more accuracy.
   Future<SearchResponse> get(FindSearchParameters params) async {
     var uri = Uri.https(UrlConstants.baseUrl,
         UrlConstants.findSearchUnencodedPath, _createQueryParameters(params));
