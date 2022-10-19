@@ -2,7 +2,7 @@ name: trip_advisor_api
 description: A dart package to communicate with trip advisor api. this package lets you do all of the api's functions
 version: 1.0.3
 # homepage: https://www.example.com
-repository: https://github.com/Gypsy-IL
+repository: https://github.com/Gypsy-IL/trip_advisor_api
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
