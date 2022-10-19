@@ -8,3 +8,7 @@
 - Add json serialization to missed parameters object
 - Add longer description
 - Fix dart formatting
+
+## 1.0.4
+
+- Add some dartdocs
