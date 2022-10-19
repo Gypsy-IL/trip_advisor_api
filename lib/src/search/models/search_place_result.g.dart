@@ -9,9 +9,9 @@ part of 'search_place_result.dart';
 SearchPlaceResult _$SearchPlaceResultFromJson(Map json) => SearchPlaceResult(
       json['location_id'] as String,
       json['name'] as String,
-      json['distance'] as String,
+      json['distance'] as String?,
       json['rating'] as String?,
-      json['bearing'] as String,
+      json['bearing'] as String?,
       ExtendedAddressObject.fromJson(
           Map<String, dynamic>.from(json['address_obj'] as Map)),
     );

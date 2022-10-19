@@ -9,9 +9,9 @@ class SearchPlaceResult {
   @JsonKey(name: "location_id")
   final String locationId;
   final String name;
-  final String distance;
+  final String? distance;
   final String? rating;
-  final String bearing;
+  final String? bearing;
   @JsonKey(name: "address_obj")
   final ExtendedAddressObject addressObj;
 
