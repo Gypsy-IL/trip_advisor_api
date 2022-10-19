@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/json_utils.dart';
 
 part 'subrating.g.dart';
 
@@ -9,7 +10,8 @@ class Subrating {
   final String localizedName;
   @JsonKey(name: "rating_image_url")
   final String ratingImageUrl;
-  final num value;
+  @JsonKey(fromJson: JsonUtils.parseDouble)
+  final num? value;
 
   Subrating(this.name, this.localizedName, this.ratingImageUrl, this.value);
 

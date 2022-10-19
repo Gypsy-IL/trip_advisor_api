@@ -8,8 +8,8 @@ part of 'ratings_user_location.dart';
 
 RatingsUserLocation _$RatingsUserLocationFromJson(Map json) =>
     RatingsUserLocation(
-      json['name'] as String,
-      json['id'] as String,
+      json['name'] as String?,
+      json['id'] as String?,
     );
 
 Map<String, dynamic> _$RatingsUserLocationToJson(

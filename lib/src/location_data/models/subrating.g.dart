@@ -10,7 +10,7 @@ Subrating _$SubratingFromJson(Map json) => Subrating(
       json['name'] as String,
       json['localized_name'] as String,
       json['rating_image_url'] as String,
-      json['value'] as num,
+      JsonUtils.parseDouble(json['value'] as String?),
     );
 
 Map<String, dynamic> _$SubratingToJson(Subrating instance) => <String, dynamic>{

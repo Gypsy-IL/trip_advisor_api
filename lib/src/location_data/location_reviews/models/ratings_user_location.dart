@@ -4,8 +4,8 @@ part 'ratings_user_location.g.dart';
 
 @JsonSerializable()
 class RatingsUserLocation {
-  final String name;
-  final String id;
+  final String? name;
+  final String? id;
 
   RatingsUserLocation(this.name, this.id);
 
