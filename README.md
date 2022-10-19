@@ -1,39 +1,26 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package lets you communicate directly with the trip advisor contents api [Found Here](https://tripadvisor-content-api.readme.io/reference/overview)
+You can search places in radius, search by text and get a lot of info about a place.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In order to use this package you just need to create a trip advisor contents api account.
+Once you get the api key itself just Create a TripAdvisorApi instance with the api and you're ready to go
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+ApiSettings settings = ApiSettings(apiKey: YOUR_API_KEY_HERE);
+TripAdvisorApi tripAdvisorApi = TripAdvisorApi(settings);
+
+tripAdvisorApi.nearbySearch.get(...)
+tripAdvisorApi.findSearch.get(...)
+tripAdvisorApi.locationDetails.get(...)
+tripAdvisorApi.locationPhotos.get(...)
+tripAdvisorApi.locationReviews.get(...)
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+You're always welcome to contribute on github. Still need to add the supported countries and supported currencies and add exception handling on http requests failures. Also documentation is needed. This was done in a hurry so there is non, but its not complicated.
