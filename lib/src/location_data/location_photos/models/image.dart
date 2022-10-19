@@ -4,13 +4,11 @@ part 'image.g.dart';
 
 @JsonSerializable()
 class Image {
-  final Image? thumbnail;
-  final Image? small;
-  final Image? medium;
-  final Image? large;
-  final Image? original;
+  final String? width;
+  final String? height;
+  final String url;
 
-  Image(this.thumbnail, this.small, this.medium, this.large, this.original);
+  Image(this.width, this.height, this.url);
 
   factory Image.fromJson(Map<String, dynamic> json) => _$ImageFromJson(json);
 

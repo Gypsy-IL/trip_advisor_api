@@ -1,14 +1,18 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'image.dart';
+
 part 'images.g.dart';
 
 @JsonSerializable()
 class Images {
-  final String width;
-  final String height;
-  final String url;
+  final Image? thumbnail;
+  final Image? small;
+  final Image? medium;
+  final Image? large;
+  final Image? original;
 
-  Images(this.width, this.height, this.url);
+  Images(this.thumbnail, this.small, this.medium, this.large, this.original);
 
   factory Images.fromJson(Map<String, dynamic> json) => _$ImagesFromJson(json);
 
