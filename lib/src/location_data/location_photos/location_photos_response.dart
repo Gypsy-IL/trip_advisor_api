@@ -3,6 +3,7 @@ import 'package:trip_advisor_api/trip_advisor_api.dart';
 
 part 'location_photos_response.g.dart';
 
+/// Response object for the location details request
 @JsonSerializable()
 class LocationPhotosResponse {
   final Iterable<LocationPhotoResult>? data;
