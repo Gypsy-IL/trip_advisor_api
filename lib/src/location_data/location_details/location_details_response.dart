@@ -15,6 +15,7 @@ import 'models/trip_type.dart';
 
 part 'location_details_response.g.dart';
 
+/// Response object for the location details request
 @JsonSerializable()
 class LocationDetailsResponse extends LocationDetailsResult {
   final TripAdvisorError? error;
