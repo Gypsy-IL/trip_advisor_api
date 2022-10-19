@@ -11,11 +11,14 @@ export 'location_reviews_parameters.dart';
 export 'location_reviews_response.dart';
 export 'location_review_result.dart';
 
+/// Class that communicates with the location reviews api
 class LocationReviews {
   final ApiSettings _settings;
 
   LocationReviews(this._settings);
 
+  /// Get a [LocationReviewsResponse] which from the passed [LocationReviewsParameters]
+  /// The Location Reviews request returns up to 3 of the most recent reviews for a specific location.
   Future<LocationReviewsResponse> get(LocationReviewsParameters params) async {
     var uri = Uri.https(
         UrlConstants.baseUrl,
