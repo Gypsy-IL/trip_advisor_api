@@ -6,10 +6,16 @@ import 'package:trip_advisor_api/src/search/nearby_search/nearby_search_paramete
 import 'package:trip_advisor_api/src/search/models/search_response.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
 
+export 'nearby_search_parameters.dart';
+
+/// Class that communicates with the nearby search api
 class NearbySearch {
   final ApiSettings _settings;
   NearbySearch(this._settings);
 
+  /// Get a [SearchResponse] which from the passed [NearbySearchParameters]
+  /// The Nearby Location Search request returns up to 10 locations found near the given latitude/longitude.
+  /// You can use category ("hotels", "attractions", "restaurants", "geos"), phone number, address to search with more accuracy.
   Future<SearchResponse> get(NearbySearchParameters params) async {
     var uri = Uri.https(UrlConstants.baseUrl,
         UrlConstants.nearbySearchUnencodedPath, _createQueryParameters(params));
