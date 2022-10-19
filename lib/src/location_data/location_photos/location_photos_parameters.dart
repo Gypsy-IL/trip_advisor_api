@@ -3,6 +3,7 @@ import 'package:trip_advisor_api/src/models/api_settings.dart';
 
 part 'location_photos_parameters.g.dart';
 
+/// parameters for the location photos api
 @JsonSerializable()
 class LocationPhotosParameters {
   /// [locationId] - required

@@ -9,7 +9,7 @@ part 'nearby_search_parameters.g.dart';
 @JsonSerializable()
 class NearbySearchParameters {
   /// [latLong] - required
-  /// Latitude/Longitude pair to scope down the search around a specifc point - eg. "42.3455,-71.10767"
+  /// Latitude/Longitude pair to scope down the search around a specific point - eg. "42.3455,-71.10767"
   final LatLong latLong;
 
   /// [category] - optional
@@ -37,7 +37,7 @@ class NearbySearchParameters {
   final Languages? language;
 
   /// [latLong] - required -
-  /// Latitude/Longitude pair to scope down the search around a specifc point - eg. "42.3455,-71.10767"
+  /// Latitude/Longitude pair to scope down the search around a specific point - eg. "42.3455,-71.10767"
   ///
   /// [category] - optional -
   /// Filters result set based on property type. Valid options are "hotels", "attractions", "restaurants", and "geos"

@@ -10,7 +10,7 @@ export 'location_photos_parameters.dart';
 export 'location_photos_response.dart';
 export 'location_photo_result.dart';
 
-/// Class that communicates with the location details api
+/// Class that communicates with the location photos api
 class LocationPhotos {
   final ApiSettings _settings;
 
