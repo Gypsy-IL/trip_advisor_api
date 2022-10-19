@@ -5,6 +5,7 @@ import 'package:trip_advisor_api/src/location_data/location_photos/models/source
 
 part 'location_photo_result.g.dart';
 
+/// Data object of the location photos response
 @JsonSerializable()
 class LocationPhotoResult {
   final String id;

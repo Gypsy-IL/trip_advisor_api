@@ -1,6 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
+/// This library lets you communicate with trip advisor content api with flutter
 library trip_advisor_api;
 
 import 'package:trip_advisor_api/src/location_data/location_details/location_details.dart';
@@ -10,42 +8,40 @@ import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/search/find_search/find_search.dart';
 import 'package:trip_advisor_api/src/search/nearby_search/nearby_search.dart';
 
-export 'src/models/api_settings.dart';
-
-export 'src/search/models/search_response.dart';
-export 'src/search/models/search_place_result.dart';
+export 'src/models/shared_models.dart';
+export 'src/search/models/search_models.dart';
+export 'src/location_data/models/location_data_models.dart';
+export 'src/location_data/location_details/models/location_details_models.dart';
+export 'src/location_data/location_photos/models/location_photos_models.dart';
+export 'src/location_data/location_reviews/models/location_reviews_models.dart';
 
 export 'src/search/nearby_search/nearby_search.dart';
-export 'src/search/nearby_search/nearby_search_parameters.dart';
-
 export 'src/search/find_search/find_search.dart';
-export 'src/search/find_search/find_search_parameters.dart';
-
 export 'src/location_data/location_details/location_details.dart';
-export 'src/location_data/location_details/location_details_parameters.dart';
-export 'src/location_data/location_details/location_details_response.dart';
-export 'src/location_data/location_details/location_details_result.dart';
-
 export 'src/location_data/location_photos/location_photos.dart';
-export 'src/location_data/location_photos/location_photos_parameters.dart';
-export 'src/location_data/location_photos/location_photos_response.dart';
-export 'src/location_data/location_photos/location_photo_result.dart';
-
 export 'src/location_data/location_reviews/location_reviews.dart';
-export 'src/location_data/location_reviews/location_reviews_parameters.dart';
-export 'src/location_data/location_reviews/location_reviews_response.dart';
-export 'src/location_data/location_reviews/location_review_result.dart';
 
-export 'src/models/address_object.dart';
-export 'src/models/lat_long.dart';
-export 'src/models/trip_advisor_error.dart';
-
+/// The Trip Advisor API is a service that return info from trip advisor
+///
+/// You can use it to search nearby places, search by text and get location details, photos and reviews
 class TripAdvisorApi {
+  /// [_settings] settings file for common settings which will probably be the same for all searches
+  /// Language can be overridden
   final ApiSettings _settings;
+
+  /// [nearbySearch] object to communicate with the nearby search api
   late NearbySearch nearbySearch;
+
+  /// [findSearch]  object to communicate with the find search api
   late FindSearch findSearch;
+
+  /// [locationDetails]  object to communicate with the location details api
   late LocationDetails locationDetails;
+
+  /// [locationPhotos]  object to communicate with the location photos api
   late LocationPhotos locationPhotos;
+
+  /// [locationReviews]  object to communicate with the location reviews api
   late LocationReviews locationReviews;
 
   TripAdvisorApi(this._settings) {

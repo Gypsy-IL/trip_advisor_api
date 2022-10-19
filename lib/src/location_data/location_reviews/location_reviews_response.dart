@@ -3,6 +3,7 @@ import 'package:trip_advisor_api/trip_advisor_api.dart';
 
 part 'location_reviews_response.g.dart';
 
+/// Response object for the location reviews request
 @JsonSerializable()
 class LocationReviewsResponse {
   final Iterable<LocationReviewResult>? data;
