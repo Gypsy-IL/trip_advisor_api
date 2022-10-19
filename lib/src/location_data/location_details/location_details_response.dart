@@ -63,5 +63,6 @@ class LocationDetailsResponse extends LocationDetailsResult {
 
   factory LocationDetailsResponse.fromJson(Map<String, dynamic> json) =>
       _$LocationDetailsResponseFromJson(json);
+  @override
   Map<String, dynamic> toJson() => _$LocationDetailsResponseToJson(this);
 }

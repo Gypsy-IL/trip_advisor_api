@@ -23,4 +23,9 @@ class NearbySearchParameters {
       this.radius,
       this.radiusUnit,
       this.language});
+
+  factory NearbySearchParameters.fromJson(Map<String, dynamic> json) =>
+      _$NearbySearchParametersFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NearbySearchParametersToJson(this);
 }

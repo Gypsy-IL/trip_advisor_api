@@ -1,7 +1,5 @@
-import 'dart:convert';
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/src/json_utils.dart';
 
 part 'trip_advisor_error.g.dart';
 

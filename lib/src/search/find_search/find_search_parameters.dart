@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/src/models/lat_long.dart';
 import 'package:trip_advisor_api/src/search/models/categories.dart';
 import 'package:trip_advisor_api/src/search/models/radius_units.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
@@ -25,4 +24,9 @@ class FindSearchParameters {
       this.radius,
       this.radiusUnit,
       this.language});
+
+  factory FindSearchParameters.fromJson(Map<String, dynamic> json) =>
+      _$FindSearchParametersFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FindSearchParametersToJson(this);
 }

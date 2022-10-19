@@ -4,6 +4,7 @@ part 'api_settings.g.dart';
 
 enum Languages { en }
 
+// ignore: constant_identifier_names
 enum Currencies { USD }
 
 @JsonSerializable()

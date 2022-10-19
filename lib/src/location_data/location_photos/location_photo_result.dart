@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/src/location_data/location_photos/models/image.dart';
 import 'package:trip_advisor_api/src/location_data/location_photos/models/images.dart';
 import 'package:trip_advisor_api/src/location_data/location_photos/models/photos_user.dart';
 import 'package:trip_advisor_api/src/location_data/location_photos/models/source.dart';

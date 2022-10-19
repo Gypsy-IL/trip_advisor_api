@@ -24,5 +24,6 @@ class ExtendedAddressObject extends AddressObject {
       super.postalcode,
       super.addressString);
 
+  @override
   Map<String, dynamic> toJson() => _$ExtendedAddressObjectToJson(this);
 }

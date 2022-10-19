@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:trip_advisor_api/src/location_data/location_reviews/location_review_result.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 
 part 'location_reviews_response.g.dart';
