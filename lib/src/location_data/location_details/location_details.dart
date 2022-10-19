@@ -4,6 +4,10 @@ import 'package:trip_advisor_api/src/constants/url_constants.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 
+export 'location_details_parameters.dart';
+export 'location_details_response.dart';
+export 'location_details_result.dart';
+
 class LocationDetails {
   final ApiSettings _settings;
 

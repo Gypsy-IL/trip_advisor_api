@@ -6,6 +6,8 @@ import 'package:trip_advisor_api/src/search/nearby_search/nearby_search_paramete
 import 'package:trip_advisor_api/src/search/models/search_response.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
 
+export 'nearby_search_parameters.dart';
+
 class NearbySearch {
   final ApiSettings _settings;
   NearbySearch(this._settings);

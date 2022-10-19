@@ -7,6 +7,10 @@ import 'package:trip_advisor_api/src/network_utils.dart';
 
 import 'location_reviews_parameters.dart';
 
+export 'location_reviews_parameters.dart';
+export 'location_reviews_response.dart';
+export 'location_review_result.dart';
+
 class LocationReviews {
   final ApiSettings _settings;
 

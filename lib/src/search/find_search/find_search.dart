@@ -7,6 +7,8 @@ import 'package:trip_advisor_api/src/search/models/search_response.dart';
 
 import 'find_search_parameters.dart';
 
+export 'find_search_parameters.dart';
+
 class FindSearch {
   final ApiSettings _settings;
 

@@ -6,6 +6,10 @@ import 'package:trip_advisor_api/src/location_data/location_photos/location_phot
 import 'package:trip_advisor_api/src/models/api_settings.dart';
 import 'package:trip_advisor_api/src/network_utils.dart';
 
+export 'location_photos_parameters.dart';
+export 'location_photos_response.dart';
+export 'location_photo_result.dart';
+
 class LocationPhotos {
   final ApiSettings _settings;
 
