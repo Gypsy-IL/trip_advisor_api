@@ -23,4 +23,4 @@ tripAdvisorApi.locationReviews.get(...)
 
 ## Additional information
 
-You're always welcome to contribute on github. Still need to add the supported countries and supported currencies and add exception handling on http requests failures
+You're always welcome to contribute on github. Still need to add the supported countries and supported currencies and add exception handling on http requests failures. Also documentation is needed. This was done in a hurry so there is non, but its not complicated.
