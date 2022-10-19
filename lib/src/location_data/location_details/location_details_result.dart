@@ -1,19 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:trip_advisor_api/src/json_utils.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/ancestor.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/award.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/category.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/cuisine.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/group.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/neighborhood.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/opening_hours.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/ranking_data.dart';
-import 'package:trip_advisor_api/src/location_data/models/subrating.dart';
-import 'package:trip_advisor_api/src/location_data/location_details/models/trip_type.dart';
-import 'package:trip_advisor_api/trip_advisor_api.dart';
+import 'package:trip_advisor_api/src/location_data/models/location_data_models.dart';
+import 'package:trip_advisor_api/src/models/shared_models.dart';
+import 'models/location_details_models.dart';
 
 part 'location_details_result.g.dart';
 
+/// Data object of the location details response
 @JsonSerializable()
 class LocationDetailsResult {
   @JsonKey(name: "location_id")

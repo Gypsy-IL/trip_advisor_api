@@ -6,6 +6,7 @@ import 'package:trip_advisor_api/src/location_data/models/subrating.dart';
 
 part 'location_review_result.g.dart';
 
+/// Data object of the location reviews response
 @JsonSerializable()
 class LocationReviewResult {
   final String id;
