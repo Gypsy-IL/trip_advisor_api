@@ -12,3 +12,7 @@
 ## 1.0.4
 
 - Add some dartdocs
+
+## 1.0.5
+
+- Make toJson reversible with fromJson
