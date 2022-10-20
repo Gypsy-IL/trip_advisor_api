@@ -1,11 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/models/languages.dart';
 
 part 'api_settings.g.dart';
-
-enum Languages { en }
-
-// ignore: constant_identifier_names
-enum Currencies { USD }
 
 @JsonSerializable()
 class ApiSettings {

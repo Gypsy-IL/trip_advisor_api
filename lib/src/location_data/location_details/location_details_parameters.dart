@@ -1,4 +1,5 @@
-import 'package:trip_advisor_api/src/models/api_settings.dart';
+import 'package:trip_advisor_api/src/models/currencies.dart';
+import 'package:trip_advisor_api/src/models/languages.dart';
 
 /// parameters for the location details api
 class LocationDetailsParameters {

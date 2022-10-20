@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip_advisor_api/src/models/languages.dart';
 import 'package:trip_advisor_api/trip_advisor_api.dart';
 part 'find_search_parameters.g.dart';
 
