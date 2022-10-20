@@ -16,9 +16,9 @@ RankingData _$RankingDataFromJson(Map json) => RankingData(
 
 Map<String, dynamic> _$RankingDataToJson(RankingData instance) =>
     <String, dynamic>{
-      'geo_location_id': instance.geoLocationId,
+      'geo_location_id': JsonUtils.numToString(instance.geoLocationId),
       'ranking_string': instance.rankingString,
       'geo_location_name': instance.geoLocationName,
-      'ranking_out_of': instance.rankingOutOf,
-      'ranking': instance.ranking,
+      'ranking_out_of': JsonUtils.numToString(instance.rankingOutOf),
+      'ranking': JsonUtils.numToString(instance.ranking),
     };

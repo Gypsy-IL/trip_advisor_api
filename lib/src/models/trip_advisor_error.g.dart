@@ -16,5 +16,5 @@ Map<String, dynamic> _$TripAdvisorErrorToJson(TripAdvisorError instance) =>
     <String, dynamic>{
       'message': instance.message,
       'type': instance.type,
-      'code': instance.code,
+      'code': JsonUtils.numToString(instance.code),
     };

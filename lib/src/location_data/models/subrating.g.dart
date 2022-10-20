@@ -17,5 +17,5 @@ Map<String, dynamic> _$SubratingToJson(Subrating instance) => <String, dynamic>{
       'name': instance.name,
       'localized_name': instance.localizedName,
       'rating_image_url': instance.ratingImageUrl,
-      'value': instance.value,
+      'value': JsonUtils.numToString(instance.value),
     };

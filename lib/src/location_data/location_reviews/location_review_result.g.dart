@@ -39,7 +39,7 @@ Map<String, dynamic> _$LocationReviewResultToJson(
       'location_id': instance.locationId,
       'publishing_date': instance.publishingDate,
       'rating': instance.rating,
-      'helpful_votes': instance.helpfulVotes,
+      'helpful_votes': JsonUtils.numToString(instance.helpfulVotes),
       'rating_image_url': instance.ratingImageUrl,
       'url': instance.url,
       'trip_type': instance.tripType,

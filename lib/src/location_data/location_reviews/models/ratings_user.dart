@@ -10,7 +10,10 @@ class RatingsUser {
   final String? username;
   @JsonKey(name: "user_location")
   final RatingsUserLocation? userLocation;
-  @JsonKey(name: "review_count", fromJson: JsonUtils.parseInt)
+  @JsonKey(
+      name: "review_count",
+      fromJson: JsonUtils.parseInt,
+      toJson: JsonUtils.numToString)
   final int? reviewCount;
   @JsonKey(name: "reviewer_badge")
   final String? reviewerBadge;

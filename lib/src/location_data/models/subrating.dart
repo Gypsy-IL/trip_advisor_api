@@ -10,7 +10,7 @@ class Subrating {
   final String localizedName;
   @JsonKey(name: "rating_image_url")
   final String ratingImageUrl;
-  @JsonKey(fromJson: JsonUtils.parseDouble)
+  @JsonKey(fromJson: JsonUtils.parseDouble, toJson: JsonUtils.numToString)
   final num? value;
 
   Subrating(this.name, this.localizedName, this.ratingImageUrl, this.value);

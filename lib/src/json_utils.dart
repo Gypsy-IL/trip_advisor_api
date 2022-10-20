@@ -6,4 +6,8 @@ class JsonUtils {
   static int? parseInt(String? source) {
     return source == null ? null : int.parse(source);
   }
+
+  static String? numToString(num? num) {
+    return num.toString();
+  }
 }

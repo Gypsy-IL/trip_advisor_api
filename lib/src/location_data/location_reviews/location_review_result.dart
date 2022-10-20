@@ -16,7 +16,10 @@ class LocationReviewResult {
   @JsonKey(name: "publishing_date")
   final String? publishingDate;
   final num rating;
-  @JsonKey(name: "helpful_votes", fromJson: JsonUtils.parseInt)
+  @JsonKey(
+      name: "helpful_votes",
+      fromJson: JsonUtils.parseInt,
+      toJson: JsonUtils.numToString)
   final int? helpfulVotes;
   @JsonKey(name: "rating_image_url")
   final String ratingImageUrl;

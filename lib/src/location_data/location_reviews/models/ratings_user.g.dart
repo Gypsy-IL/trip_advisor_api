@@ -21,7 +21,7 @@ Map<String, dynamic> _$RatingsUserToJson(RatingsUser instance) =>
     <String, dynamic>{
       'username': instance.username,
       'user_location': instance.userLocation?.toJson(),
-      'review_count': instance.reviewCount,
+      'review_count': JsonUtils.numToString(instance.reviewCount),
       'reviewer_badge': instance.reviewerBadge,
       'avatar': instance.avatar.toJson(),
     };

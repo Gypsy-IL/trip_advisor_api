@@ -18,9 +18,9 @@ class LocationDetailsResult {
   @JsonKey(name: "address_obj")
   final AddressObject? addressObj;
   final Iterable<Ancestor>? ancestors;
-  @JsonKey(fromJson: JsonUtils.parseDouble)
+  @JsonKey(fromJson: JsonUtils.parseDouble, toJson: JsonUtils.numToString)
   final num? latitude;
-  @JsonKey(fromJson: JsonUtils.parseDouble)
+  @JsonKey(fromJson: JsonUtils.parseDouble, toJson: JsonUtils.numToString)
   final num? longitude;
   final String? timezone;
   final String? email;
@@ -30,16 +30,22 @@ class LocationDetailsResult {
   final String? writeReview;
   @JsonKey(name: "ranking_data")
   final RankingData? rankingData;
-  @JsonKey(fromJson: JsonUtils.parseDouble)
+  @JsonKey(fromJson: JsonUtils.parseDouble, toJson: JsonUtils.numToString)
   final num? rating;
   @JsonKey(name: "rating_image_url")
   final String? ratingImageUrl;
-  @JsonKey(name: "num_reviews", fromJson: JsonUtils.parseInt)
+  @JsonKey(
+      name: "num_reviews",
+      fromJson: JsonUtils.parseInt,
+      toJson: JsonUtils.numToString)
   final int? numReviews;
   @JsonKey(name: "review_rating_count")
   final Map<int, String>? reviewRatingCount;
   final Map<int, Subrating>? subratings;
-  @JsonKey(name: "photo_count", fromJson: JsonUtils.parseInt)
+  @JsonKey(
+      name: "photo_count",
+      fromJson: JsonUtils.parseInt,
+      toJson: JsonUtils.numToString)
   final int? photoCount;
   @JsonKey(name: "see_all_photos")
   final String? seeAllPhotos;
