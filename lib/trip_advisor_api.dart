@@ -1,25 +1,24 @@
 /// This library lets you communicate with trip advisor content api with flutter
 library trip_advisor_api;
 
-import 'package:trip_advisor_api/src/location_data/location_details/location_details.dart';
-import 'package:trip_advisor_api/src/location_data/location_photos/location_photos.dart';
-import 'package:trip_advisor_api/src/location_data/location_reviews/location_reviews.dart';
-import 'package:trip_advisor_api/src/models/api_settings.dart';
-import 'package:trip_advisor_api/src/search/find_search/find_search.dart';
-import 'package:trip_advisor_api/src/search/nearby_search/nearby_search.dart';
+import 'src/location_data/location_details/location_details.dart';
+import 'src/location_data/location_photos/location_photos.dart';
+import 'src/location_data/location_reviews/location_reviews.dart';
+import 'src/models/api_settings.dart';
+import 'src/search/find_search/find_search.dart';
+import 'src/search/nearby_search/nearby_search.dart';
 
-export 'src/models/shared_models.dart';
-export 'src/search/models/search_models.dart';
-export 'src/location_data/models/location_data_models.dart';
-export 'src/location_data/location_details/models/location_details_models.dart';
-export 'src/location_data/location_photos/models/location_photos_models.dart';
-export 'src/location_data/location_reviews/models/location_reviews_models.dart';
-
-export 'src/search/nearby_search/nearby_search.dart';
-export 'src/search/find_search/find_search.dart';
 export 'src/location_data/location_details/location_details.dart';
+export 'src/location_data/location_details/models/location_details_models.dart';
 export 'src/location_data/location_photos/location_photos.dart';
+export 'src/location_data/location_photos/models/location_photos_models.dart';
 export 'src/location_data/location_reviews/location_reviews.dart';
+export 'src/location_data/location_reviews/models/location_reviews_models.dart';
+export 'src/location_data/models/location_data_models.dart';
+export 'src/models/shared_models.dart';
+export 'src/search/find_search/find_search.dart';
+export 'src/search/models/search_models.dart';
+export 'src/search/nearby_search/nearby_search.dart';
 
 /// The Trip Advisor API is a service that return info from trip advisor
 ///
