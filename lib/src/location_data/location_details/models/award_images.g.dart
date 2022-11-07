@@ -7,9 +7,9 @@ part of 'award_images.dart';
 // **************************************************************************
 
 AwardImages _$AwardImagesFromJson(Map json) => AwardImages(
-      json['tiny'] as String,
-      json['small'] as String,
-      json['large'] as String,
+      json['tiny'] as String?,
+      json['small'] as String?,
+      json['large'] as String?,
     );
 
 Map<String, dynamic> _$AwardImagesToJson(AwardImages instance) =>
