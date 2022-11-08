@@ -20,3 +20,7 @@
 ## 1.0.6
 
 - Remove unused import
+
+## 1.0.7
+
+- Fix Awards serialization problems
