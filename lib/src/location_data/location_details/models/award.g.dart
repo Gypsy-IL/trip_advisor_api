@@ -7,7 +7,7 @@ part of 'award.dart';
 // **************************************************************************
 
 Award _$AwardFromJson(Map json) => Award(
-      json['around_type'] as String?,
+      json['award_type'] as String?,
       JsonUtils.parseInt(json['year'] as String?),
       json['images'] == null
           ? null
@@ -18,7 +18,7 @@ Award _$AwardFromJson(Map json) => Award(
     );
 
 Map<String, dynamic> _$AwardToJson(Award instance) => <String, dynamic>{
-      'around_type': instance.aroundType,
+      'award_type': instance.awardType,
       'year': JsonUtils.numToString(instance.year),
       'images': instance.images?.toJson(),
       'categories': instance.categories?.toList(),

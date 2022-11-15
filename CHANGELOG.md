@@ -24,3 +24,7 @@
 ## 1.0.7
 
 - Fix Awards serialization problems
+
+## 1.0.8
+
+- Fix typo in award model

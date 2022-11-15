@@ -6,8 +6,8 @@ part 'award.g.dart';
 
 @JsonSerializable()
 class Award {
-  @JsonKey(name: "around_type")
-  final String? aroundType;
+  @JsonKey(name: "award_type")
+  final String? awardType;
   @JsonKey(fromJson: JsonUtils.parseInt, toJson: JsonUtils.numToString)
   final int? year;
   final AwardImages? images;
@@ -15,7 +15,7 @@ class Award {
   @JsonKey(name: "display_name")
   final String? displayName;
 
-  Award(this.aroundType, this.year, this.images, this.categories,
+  Award(this.awardType, this.year, this.images, this.categories,
       this.displayName);
 
   factory Award.fromJson(Map<String, dynamic> json) => _$AwardFromJson(json);
