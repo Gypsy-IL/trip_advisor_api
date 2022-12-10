@@ -17,7 +17,7 @@ class LocationPhotoResult {
   final String publishedDate;
   final Images images;
   final Source source;
-  final PhotosUser user;
+  final PhotosUser? user;
 
   LocationPhotoResult(this.id, this.isBlessed, this.album, this.caption,
       this.publishedDate, this.images, this.source, this.user);
