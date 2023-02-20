@@ -15,7 +15,9 @@ LocationPhotoResult _$LocationPhotoResultFromJson(Map json) =>
       json['published_date'] as String,
       Images.fromJson(Map<String, dynamic>.from(json['images'] as Map)),
       Source.fromJson(Map<String, dynamic>.from(json['source'] as Map)),
-      PhotosUser.fromJson(Map<String, dynamic>.from(json['user'] as Map)),
+      json['user'] == null
+          ? null
+          : PhotosUser.fromJson(Map<String, dynamic>.from(json['user'] as Map)),
     );
 
 Map<String, dynamic> _$LocationPhotoResultToJson(
@@ -28,5 +30,5 @@ Map<String, dynamic> _$LocationPhotoResultToJson(
       'published_date': instance.publishedDate,
       'images': instance.images.toJson(),
       'source': instance.source.toJson(),
-      'user': instance.user.toJson(),
+      'user': instance.user?.toJson(),
     };
